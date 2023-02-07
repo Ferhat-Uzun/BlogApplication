@@ -8,11 +8,10 @@
   <div class="container">
     <a th:href="@{'/'}">Home</a>
       <div class="post">
-          <div class="post">
-            <h2 th:text="${post.title}">Title</h2>
-            <h5 th:text="'Created on '+ ${post.createdAt} ">Created at</h5>
-            <p th:text="${post.body}">body text</p>
-          </div>
+          <h2 th:text="${post.title}">Title</h2>
+          <h4 th:text="'Created by: '+${post.account.firstName}"></h4>
+          <h5 th:text="'Published on: '+ ${post.createdAt} ">Created at</h5>
+          <p th:text="${post.body}">body text</p>
       </div>
   </div>
 </body>
